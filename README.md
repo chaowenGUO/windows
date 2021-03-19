@@ -7,5 +7,5 @@ setx PATH "%PATH%;C:/Program Files (x86)/Vim/vim82;C:/Program Files/Google/Chrom
 setx DEBUG pw:api<br>
 quit rdp and relogin rdp<br>
 refreshenv<br>
-schtasks /create /sc hourly /mo 2 /tn colab /tr "C:/Program Files/nodejs/node --harmony C:/Users/azureuser/Documents/colab/colab.js"<br>
+schtasks /create /sc minute /mo 90 /tn colab /tr "C:/Program Files/nodejs/node --harmony C:/Users/azureuser/Documents/colab/colab.js"<br>
 schtacks /delete /tn colab
