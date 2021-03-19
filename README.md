@@ -6,5 +6,6 @@ C:/Users/azureuser/Downloads/windows-main/ChromeStandaloneSetup64.exe<br>
 setx PATH "%PATH%;C:/Program Files (x86)/Vim/vim82;C:/Program Files/Google/Chrome/Application" /m<br>
 setx DEBUG pw:api<br>
 quit rdp and relogin rdp<br>
-schtasks /create /sc hour /mo 12 /tn colab /tr "C:/Program Files/nodejs/node --harmony C:/Users/azureuser/Documents/colab/colab.js"<br>
+refreshenv<br>
+schtasks /create /sc hourly /mo 12 /tn colab /tr "C:/Program Files/nodejs/node --harmony C:/Users/azureuser/Documents/colab/colab.js"<br>
 schtacks /delete /tn colab
