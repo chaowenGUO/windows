@@ -3,6 +3,6 @@ https://docs.github.com/en/github/managing-large-files/conditions-for-large-file
 (New-Object System.Net.WebClient).DownloadFile('https://github.com/chaowenGUO/windows/archive/main.zip', 'C:/Users/azureuser/Downloads/main.zip')<br>
 Expand-Archive -Path C:/Users/azureuser/Downloads/main.zip -DestinationPath C:/Users/azureuser/Downloads<br>
 ChromeStandaloneSetup64.exe in C:/Users/azureuser/Downloads/windows-main<br>
-$Env:Path=$Env:Path+';C:/Program Files (x86)/Vim/vim82;C:/Program Files (x86)/Google/Chrome/Application'<br>
-[Environment]::SetEnvironmentVariable("Path", $env:Path, [System.EnvironmentVariableTarget]::Machine)<br>
+setx PATH '%PATH%;C:/Program Files (x86)/Vim/vim82;C:/Program Files (x86)/Google/Chrome/Application' /m<br>
+refleshenv<br>
 Register-ScheduledTask -Action (New-ScheduledTaskAction -Execute node -Argument '--harmony C:\Users\azureuser\Documents\colab\colab.js') -Trigger (New-ScheduledTaskTrigger -Once -At 12AM -RepetitionInterval (New-TimeSpan -Hours 12)) -TaskName colab
