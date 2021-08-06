@@ -7,6 +7,6 @@ setx PATH "%PATH%;C:/Program Files (x86)/Vim/vim82;C:/Program Files/Google/Chrom
 setx DEBUG pw:api<br>
 quit rdp and relogin rdp<br>
 schtasks /create /sc minute /mo 90 /tn colab /tr "C:/Program Files/nodejs/node --harmony C:/Users/azureuser/Documents/colab/colab.js"<br>
-schtacks /delete /tn colab
+schtacks /delete /tn colab<br>
 Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0<br>
 Start-Service sshd
